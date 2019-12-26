@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{margin: 0 ;padding: 0;}
+      .petslide li{display: none;list-style: none;}
+      .petslide li img{width: 100%;}
+      .slide{width: 600px;margin: 0 auto;}
+      .petslide{padding: 0;}
+
+
+     .petPager{text-align: center;margin: 0  auto 10px;}
+      .petPager a{text-decoration: none;position: relative;display: inline-block;margin: 0 5px;color:#222}
+       .petPager a:hover{text-decoration: underline;}
+      .petPager .petPrev{}
+      .petPager .petNext{}
+
+      .petSidebar .sidebarCont{text-align: center;}
+      .petSidebar .sidebarCont a{display: inline-block;vertical-align: top;max-width: 100px;margin: 0 5px;}
+      .petSidebar .sidebarCont a img{width: 100%;}
+      .petsideCurrent, .sidebarCont a:hover {opacity: .3;}
+    </style>
+</head>
+<body>
+    
+    <div>
+        <div class="slide">
+            <ul class="petslide">
+                <li><img src="img/pro2.jpg" alt="asd"></li>
+                <li><img src="img/pro3.jpg" alt="asd"></li>
+                <li><img src="img/pro4.jpg" alt="asd"></li>
+                <li><img src="img/pro5.jpg" alt="asd"></li>
+                <li><img src="img/pro6.jpg" alt="asd"></li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+<script src="jquery.min.js"></script>
+<script src="petslider.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".petslide").petslider({
+            speed:1000,
+            timeout: 2000,
+            auto:true,
+            pager: true,
+            sidebar: true
+        })
+    })
+</script>
+</html>
